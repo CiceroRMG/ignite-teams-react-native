@@ -1,17 +1,10 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 
 export default function Groups() {
   return (
-    <View style={styles.container}>
-      <Text className="text-lg font-bold text-blue-500">Abra cadabra</Text>
+    <View className="flex-1 justify-center items-center bg-black">
+      <Text className="text-xl font-regular text-blue-500">Abra cadabra</Text>
+      <Text className="text-red300 text-xl font-regular">Hello world</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-    container: {
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-        }
-    })
