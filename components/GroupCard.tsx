@@ -9,7 +9,7 @@ export function GroupCard({title, ...rest}: GroupCardProps) {
   return (
     <TouchableOpacity
         {...rest} 
-        className="w-full h-[90px] bg-gray400 rounded-md flex-row items-center p-6 mb-3"
+        className="w-full h-[90px] bg-gray400 rounded-md flex-row items-center p-6"
     >
         <View className="mr-5">
           <UsersThree
