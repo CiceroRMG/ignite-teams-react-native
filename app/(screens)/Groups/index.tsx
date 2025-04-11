@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button";
 import { GroupCard } from "@/components/GroupCard";
 import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
@@ -6,10 +7,10 @@ import { useState } from "react";
 import { FlatList, View } from "react-native";
 
 export default function Groups() {
-  const [groups, setGroups] = useState<string[]>(['Turma 1', 'Turma 2', 'Turma 3', 'Turma 4']);
+  const [groups, setGroups] = useState<string[]>([]);
 
   return (
-    <View className="flex-1 justify-center pt-20 bg-gray500 px-6">
+    <View className="flex-1 justify-center bg-gray500 pt-10 pb-4 px-6">
       <Header />
 
       <Highlight title="Turmas" subtitle="Jogue com a sua turma" />
@@ -28,6 +29,8 @@ export default function Groups() {
           <ListEmpty text="Que tal cadastrar sua primeira turma?" />
         }
       />
+
+      <Button title="Criar nova turma" color="primary" />
       
     </View>
   );
