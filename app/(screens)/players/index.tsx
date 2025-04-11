@@ -1,3 +1,4 @@
+import { ButtonIcon } from "@/components/ButtonIcon";
 import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
 import { View } from "react-native";
@@ -12,6 +13,8 @@ export default function Players() {
             title="Nome da Turma" 
             subtitle="Adicione a galera e separe os times" 
         />
+
+        <ButtonIcon size={28} iconColor="secondary" />
 
     </View>
   );
