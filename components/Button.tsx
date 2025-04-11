@@ -1,4 +1,4 @@
-import { TouchableOpacity, TouchableOpacityProps, Text, View } from "react-native";
+import { TouchableOpacity, TouchableOpacityProps, Text } from "react-native";
 import { tv } from "tailwind-variants";
 
 const buttonStyle = tv({

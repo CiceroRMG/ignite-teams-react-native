@@ -1,0 +1,25 @@
+import { Button } from "@/components/Button";
+import { Header } from "@/components/Header";
+import { Highlight } from "@/components/Highlight";
+import { UsersThree } from "phosphor-react-native";
+import { View } from "react-native";
+
+export default function NewGroup() {
+
+  return (
+    <View className="flex-1 bg-gray500 pt-14 p-6">
+      <Header hasBackButton />
+
+      <View className="flex-1 justify-center">
+        <View className="self-center">
+            <UsersThree size={56} color="#00875F" />
+        </View>
+        
+        <Highlight title="Nova turma" subtitle="crie a turma para adicionar as pessoas" />
+
+        <Button title="Criar" color="primary" />
+      </View>
+      
+    </View>
+  );
+}
