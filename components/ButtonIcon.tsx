@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 interface ButtonIconProps extends TouchableOpacityProps {
     iconColor?: 'primary' | 'secondary';
     size?: number;
+    icon: keyof typeof MaterialIcons.glyphMap;
 }
 
 const colors = {
@@ -12,7 +13,7 @@ const colors = {
     secondary: "#F75A68",
 }
 
-export function ButtonIcon({iconColor = 'primary', size = 24, ...rest}: ButtonIconProps) {
+export function ButtonIcon({icon, iconColor = 'primary', size = 24, ...rest}: ButtonIconProps) {
     const mergedClasses = twMerge(
         'h-[56px] w-[56px] justify-center items-center ml-3',
         rest.className,
@@ -24,7 +25,7 @@ export function ButtonIcon({iconColor = 'primary', size = 24, ...rest}: ButtonIc
         className={mergedClasses}
     >
         <MaterialIcons
-            name="home"
+            name={icon}
             size={size}
             color={iconColor === 'primary' ? colors.primary : colors.secondary}
         />
