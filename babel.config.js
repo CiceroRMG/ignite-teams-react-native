@@ -14,9 +14,8 @@ module.exports = {
                     '@screens': './app/(screens)',
                     '@utils': './utils',
                     '@storage': './storage',
-                    '@routes': './routes',
                     '@hooks': './hooks',
-                    '@theme': './theme',
+                    '@app': './app',
                 }
             }
         ]

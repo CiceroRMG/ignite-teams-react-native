@@ -1,10 +1,10 @@
-import { Stack } from "expo-router";
 import "../styles/global.css"
+import { Stack } from "expo-router";
 import { useEffect } from "react";
 import { useFonts, Roboto_400Regular, Roboto_700Bold} from "@expo-google-fonts/roboto";
-import * as SplashScreen from 'expo-splash-screen';
 import { Loading } from "@/components/Loading";
 import { StatusBar } from "expo-status-bar";
+import * as SplashScreen from 'expo-splash-screen';
 import * as NavigationBar from "expo-navigation-bar";
 
 SplashScreen.preventAutoHideAsync();
@@ -37,7 +37,7 @@ export default function RootLayout() {
         backgroundColor="transparent"
         translucent
       />
-      <Stack 
+      <Stack
         screenOptions={{
           headerShown: false,
         }}

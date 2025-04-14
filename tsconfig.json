@@ -24,9 +24,9 @@
       "@utils/*": [
         "./utils/*"
       ],
-      "@theme/*": [
-        "./theme/*"
-      ]
+      "@app/*": [
+        "./app/*"
+      ],
     }
   },
   "include": [

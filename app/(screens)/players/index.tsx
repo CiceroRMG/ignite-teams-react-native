@@ -8,14 +8,15 @@ import { ListEmpty } from "@/components/ListEmpty";
 import { PlayerCard } from "@/components/PlayerCard";
 import { useState } from "react";
 import { FlatList, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Players() {
   const [players, setPlayers] = useState<string[]>(['Rodrigo', 'Lucas', 'Gustavo', 'Gabriel', 'Felipe', 'João', 'Pedro', 'Thiago', 'Rafael', 'Matheus']);
   const [team, setTeam] = useState<string>('Time A');
 
   return (
-    <View className="flex-1 bg-gray500 pt-14 p-6">
-        <Header hasBackButton />
+    <SafeAreaView className="flex-1 bg-gray500 p-6">
+        <Header hasBackButton backToHome />
 
         <Highlight 
           title="Nome da Turma"
@@ -88,7 +89,6 @@ export default function Players() {
           )}
         </View>
         
-        
-    </View>
+    </SafeAreaView>
   );
 }

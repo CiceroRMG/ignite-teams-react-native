@@ -5,15 +5,26 @@ import { useRouter } from "expo-router";
 
 interface HeaderProps {
   hasBackButton?: boolean;
+  backToHome?: boolean;
 }
 
-export function Header({hasBackButton = false}: HeaderProps) {
+export function Header({backToHome = true, hasBackButton = false}: HeaderProps) {
   const router = useRouter();
+
+  const handleBackButton = () => {
+    if (backToHome) {
+      router.navigate('/groups');
+      return;
+    }
+
+    router.back();
+  
+  }
 
   return (
     <View className="w-full justify-center items-center flex-row">
       {hasBackButton && (
-        <TouchableOpacity className="flex-1" onPress={() => router.back()}>
+        <TouchableOpacity className="flex-1" onPress={handleBackButton}>
           <CaretLeft size={36} color="#FFF" />
         </TouchableOpacity>
       )}

@@ -5,12 +5,17 @@ import { Input } from "@/components/Input";
 import { useRouter } from "expo-router";
 import { UsersThree } from "phosphor-react-native";
 import { View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function NewGroup() {
   const router = useRouter();
 
+  const handlePlayers = () => {
+    router.push('/players')
+  }
+
   return (
-    <View className="flex-1 bg-gray500 pt-14 p-6">
+    <SafeAreaView className="flex-1 bg-gray500 p-6">
       <Header hasBackButton />
 
       <View className="flex-1 justify-center">
@@ -25,11 +30,11 @@ export default function NewGroup() {
         <Button 
           title="Criar" 
           color="primary" 
-          onPress={() => router.push('/players')}
+          onPress={handlePlayers}
         />
         
       </View>
       
-    </View>
+    </SafeAreaView>
   );
 }
