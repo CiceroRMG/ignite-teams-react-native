@@ -1,9 +1,9 @@
-import Players from "./(screens)/players";
+import Groups from "./(screens)/groups";
 
 export default function Index() {
   return (
     <>
-      <Players />
+      <Groups />
     </>
   );
 }

@@ -3,11 +3,14 @@ import { GroupCard } from "@/components/GroupCard";
 import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
 import { ListEmpty } from "@/components/ListEmpty";
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { FlatList, View } from "react-native";
 
 export default function Groups() {
   const [groups, setGroups] = useState<string[]>([]);
+
+  const router = useRouter()
 
   return (
     <View className="flex-1 justify-center bg-gray500 pt-10 pb-4 px-6">
@@ -30,7 +33,11 @@ export default function Groups() {
         }
       />
 
-      <Button title="Criar nova turma" color="primary" />
+      <Button 
+        title="Criar nova turma" 
+        color="primary" 
+        onPress={() => router.push('/newGroup')}
+      />
       
     </View>
   );

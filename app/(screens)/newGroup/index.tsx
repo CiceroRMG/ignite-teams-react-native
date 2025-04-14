@@ -2,10 +2,12 @@ import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
 import { Input } from "@/components/Input";
+import { useRouter } from "expo-router";
 import { UsersThree } from "phosphor-react-native";
 import { View } from "react-native";
 
 export default function NewGroup() {
+  const router = useRouter();
 
   return (
     <View className="flex-1 bg-gray500 pt-14 p-6">
@@ -20,7 +22,12 @@ export default function NewGroup() {
 
         <Input placeholder="Digite o nome da turma" className="mb-5" />
 
-        <Button title="Criar" color="primary"/>
+        <Button 
+          title="Criar" 
+          color="primary" 
+          onPress={() => router.push('/players')}
+        />
+        
       </View>
       
     </View>

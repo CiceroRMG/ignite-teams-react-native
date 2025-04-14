@@ -79,15 +79,15 @@ export default function Players() {
             
           />
 
+          {players.length > 0 && (
+            <Button
+              title="Remover Turma"
+              color="secondary"
+              onPress={() => {}}
+            />
+          )}
         </View>
         
-        {players.length > 0 && (
-          <Button
-            title="Remover Turma"
-            color="secondary"
-            onPress={() => {}}
-          />
-        )}
         
     </View>
   );
