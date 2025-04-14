@@ -6,11 +6,13 @@ import { Highlight } from "@/components/Highlight";
 import { Input } from "@/components/Input";
 import { ListEmpty } from "@/components/ListEmpty";
 import { PlayerCard } from "@/components/PlayerCard";
+import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Players() {
+  const { teamName } = useLocalSearchParams();
   const [players, setPlayers] = useState<string[]>(['Rodrigo', 'Lucas', 'Gustavo', 'Gabriel', 'Felipe', 'João', 'Pedro', 'Thiago', 'Rafael', 'Matheus']);
   const [team, setTeam] = useState<string>('Time A');
 
@@ -19,7 +21,7 @@ export default function Players() {
         <Header hasBackButton backToHome />
 
         <Highlight 
-          title="Nome da Turma"
+          title={teamName as string}
           subtitle="Adicione a galera e separe os times" 
         />
 

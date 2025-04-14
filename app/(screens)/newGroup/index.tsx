@@ -4,14 +4,16 @@ import { Highlight } from "@/components/Highlight";
 import { Input } from "@/components/Input";
 import { useRouter } from "expo-router";
 import { UsersThree } from "phosphor-react-native";
+import { useState } from "react";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function NewGroup() {
   const router = useRouter();
+  const [teamName, setTeamName] = useState<string>('');
 
   const handlePlayers = () => {
-    router.push('/players')
+    router.push(`/players?teamName=${encodeURIComponent(teamName)}`);
   }
 
   return (
@@ -25,7 +27,11 @@ export default function NewGroup() {
 
         <Highlight title="Nova turma" subtitle="Crie a turma para adicionar as pessoas" />
 
-        <Input placeholder="Digite o nome da turma" className="mb-5" />
+        <Input 
+          placeholder="Digite o nome da turma" 
+          className="mb-5" 
+          onChangeText={setTeamName}
+        />
 
         <Button 
           title="Criar" 
