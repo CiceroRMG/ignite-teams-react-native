@@ -18,7 +18,7 @@ export default function Players() {
         <Header hasBackButton />
 
         <Highlight 
-          title="Nome da Turma" 
+          title="Nome da Turma"
           subtitle="Adicione a galera e separe os times" 
         />
 
